@@ -1,0 +1,51 @@
+
+
+h1{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+form div{
+    background-color:  white;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid rgba(0,28,0,0.3);
+    border-radius: 10px;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+}
+
+.contact-form div label {
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+p{
+    color: red;
+}
+.contact-form button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
