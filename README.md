@@ -26,10 +26,30 @@ Clone the repository to your local machine:
 git clone https://github.com/piyush-gpt/omniversity_intern.git
 cd omniversity_intern
 cd my-app
+```
 
 Install the required dependencies:
 ```bash
 npm install
+```
+or
+```bash
+yarn install
+```
 
+## Usage
+
+To start the development server:
+
+```bash
+npm start
+```
+or
+
+```bash
+yarn install
+```
+
+Navigate to http://localhost:3000 to view the app in your browser.
 
 
