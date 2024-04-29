@@ -24,4 +24,12 @@ Clone the repository to your local machine:
 
 ```bash
 git clone https://github.com/piyush-gpt/omniversity_intern.git
-cd contact-us-form
+cd omniversity_intern
+cd my-app
+
+Install the required dependencies:
+```bash
+npm install
+
+
+
