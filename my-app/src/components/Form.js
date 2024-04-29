@@ -1,23 +1,36 @@
 import React, { useState } from 'react'
 import "../css/Form.css"
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 
 function Form() {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
-
+    const navigate=useNavigate();
     const onSubmit = data => {
         console.log(data);
+        const file = data.file[0];
+        const fileName = file ? file.name : '';
+
+        // Store file name along with other data in local storage
+        const storedData = {
+            name: data.name,
+            email: data.email,
+            message: data.message,
+            fileName // Storing the file name
+        };
+
         const submissions = JSON.parse(localStorage.getItem('submissions')) || [];
-        localStorage.setItem('submissions', JSON.stringify([...submissions, data]));
+        localStorage.setItem('submissions', JSON.stringify([...submissions, storedData]));
 
         const formData = new FormData();
-        formData.append('name', data.name);
-        formData.append('email', data.email);
-        formData.append('message', data.message);
         formData.append('file', data.file[0]);
 
-        fetch('http://localhost:4000/api/upload', {
+        //mock server
+        fetch('https://7fa19036-ad3d-4323-bf50-fe9c0c330222.mock.pstmn.io/upload', {
             method: 'POST',
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            },
             body: formData
         })
         .then(response => response.json())
@@ -57,6 +70,8 @@ function Form() {
             </div>
             <button type="submit">Submit</button>
         </form>
+
+        <button onClick={()=> navigate("/submissions")} className=' navButton'>View Submissions</button>
         </div>
     );
 };
