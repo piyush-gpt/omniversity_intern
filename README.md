@@ -47,7 +47,7 @@ npm start
 or
 
 ```bash
-yarn install
+yarn start
 ```
 
 Navigate to http://localhost:3000 to view the app in your browser.
