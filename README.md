@@ -23,5 +23,5 @@ Before you begin, ensure you have met the following requirements:
 Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/yourusername/contact-us-form.git
+git clone https://github.com/piyush-gpt/omniversity_intern.git
 cd contact-us-form
